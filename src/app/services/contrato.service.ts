@@ -17,4 +17,8 @@ export class ContratoService {
   getContratos(): Observable<Contrato[]> {
     return this.http.get<Contrato[]>(this.apiUrl);
   }
+
+  saveContrato(contrato: Contrato): Observable<Contrato> {
+    return this.http.post<Contrato>(this.apiUrl, contrato);
+  }
 }

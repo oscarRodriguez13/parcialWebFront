@@ -3,6 +3,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Contrato } from '../../models/Contrato';
 import { ContratoService } from '../../services/contrato.service'; 
 import { CommonModule } from '@angular/common'; 
+import { Router } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -17,7 +18,8 @@ export class ContratosListComponent implements OnInit {
   contratos: Contrato[] = [];  // Arreglo para almacenar los contratos
   errorMessage: string = '';  // Variable para manejar errores
 
-  constructor(private contratoService: ContratoService) { }
+  constructor(private contratoService: ContratoService, private router: Router) { }
+  
 
   ngOnInit(): void {
     // Al inicializar el componente, obtenemos los contratos
@@ -30,4 +32,9 @@ export class ContratosListComponent implements OnInit {
       }
     );
   }
+
+  irCrear() {
+    this.router.navigate(['/crear']); 
+  }
+
 }
