@@ -1,0 +1,29 @@
+<!-- contrato-create.component.html -->
+<h2>Crear Nuevo Contrato</h2>
+<form (ngSubmit)="onSubmit()">
+  <label for="identificador">Identificador:</label>
+  <input type="text" id="identificador" [(ngModel)]="contrato.identificador" name="identificador" required><br>
+
+  <label for="valor">Valor:</label>
+  <input type="number" id="valor" [(ngModel)]="contrato.valor" name="valor" required><br>
+
+  <label for="nombreContratante">Nombre Contratante:</label>
+  <input type="text" id="nombreContratante" [(ngModel)]="contrato.nombreContratante" name="nombreContratante" required><br>
+
+  <label for="documentoContratante">Documento Contratante:</label>
+  <input type="text" id="documentoContratante" [(ngModel)]="contrato.documentoContratante" name="documentoContratante" required><br>
+
+  <label for="nombreContratantista">Nombre Contratantista:</label>
+  <input type="text" id="nombreContratantista" [(ngModel)]="contrato.nombreContratantista" name="nombreContratantista" required><br>
+
+  <label for="documentoContratantista">Documento Contratantista:</label>
+  <input type="text" id="documentoContratantista" [(ngModel)]="contrato.documentoContratantista" name="documentoContratantista" required><br>
+
+  <label for="fechaInicial">Fecha Inicial:</label>
+  <input type="date" id="fechaInicial" [(ngModel)]="contrato.fechaInicial" name="fechaInicial" required><br>
+
+  <label for="fechaFinal">Fecha Final:</label>
+  <input type="date" id="fechaFinal" [(ngModel)]="contrato.fechaFinal" name="fechaFinal" required><br>
+
+  <button type="submit">Crear Contrato</button>
+</form>
